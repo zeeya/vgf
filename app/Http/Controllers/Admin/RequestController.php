@@ -56,7 +56,7 @@ class RequestController extends Controller
         $return_request->n_kvps = $request->input('n_kvps');
 
         $return_request->update();
-        flash('La designation a été mise à jour avec succès!')->success();
+        flash('La demande a été mise à jour avec succès!')->success();
         return \Redirect::route('admin.edit.request', array($return_request->id));
     }
 

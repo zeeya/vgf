@@ -38,7 +38,7 @@ class ProfileController extends Controller
             $user->password = Hash::make($request->input('password'));
         }
         $user->update();
-        flash('L\'utilisateur a été mise à jour avec succès!')->success();
+        flash('Le profile a été mise à jour avec succès!')->success();
         return \Redirect::route('admin.edit.profile');
     }
 

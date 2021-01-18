@@ -2,7 +2,7 @@
 
 @section('content')
     @include('admin.shared.header', [
-        'title' => __('Add new user ').' ' ,
+        'title' => __('Ajouter un nouvel utilisateur ').' ' ,
         'description' => __(''),
         'class' => ''
     ])
@@ -13,7 +13,7 @@
                 <div class="card bg-secondary shadow">
                     <div class="card-header bg-white border-0">
                         <div class="row align-items-center">
-                            <h3 class="mb-0">{{ __('Add User') }}</h3>
+                            <h3 class="mb-0">{{ __('Ajouter un nouvel utilisateur') }}</h3>
                         </div>
                     </div>
                     <div class="card-body">

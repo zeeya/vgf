@@ -13,7 +13,7 @@
 
 
 <div class="pt-2 pb-2 pl-9 pr-9 ">
-    <h6 class="heading-small text-muted mb-4">{{ __('Request information') }}</h6>
+    <h6 class="heading-small text-muted mb-4">{{ __('Information') }}</h6>
 
 
     <div class="form-group{{ $errors->has('return_type_id') ? ' has-danger' : '' }}">
@@ -32,7 +32,7 @@
     </div>
 
     <div class="form-group{{ $errors->has('package_designation_id') ? ' has-danger' : '' }}">
-        <label class="form-control-label" for="package_designation_id">{{ __('Type') }}</label>
+        <label class="form-control-label" for="package_designation_id">{{ __('Désignation') }}</label>
         <select name="package_designation_id" id="package_designation_id"  class="form-control form-control-alternative{{ $errors->has('package_designation_id') ? ' is-invalid' : '' }}" >
             <option disabled></option>
             @foreach ($designations as $designation)
@@ -69,7 +69,7 @@
     </div>
 
     <div class="text-center">
-        <button type="submit" class="btn btn-success mt-4">{{ __('Save') }}</button>
+        <button type="submit" class="btn btn-success mt-4">{{ __('Enregistrer') }}</button>
     </div>
 </div>
 @push('scripts')

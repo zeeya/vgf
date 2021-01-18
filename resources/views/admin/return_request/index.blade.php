@@ -14,7 +14,7 @@
                         <div class="card-header border-0">
                             <div class="row align-items-center">
                                 <div class="col-8">
-                                    <h3 class="mb-0">Users</h3>
+                                    <h3 class="mb-0">Liste des demandes</h3>
                                 </div>
                                 <div class="col-4 text-right">
                                 </div>
@@ -31,13 +31,13 @@
                                     <td><input type="text" class="form-control" name="id" id="id"
                                                autocomplete="off" placeholder="Id"></td>
                                     <td><input type="text" class="form-control" name="firstname" id="firstname"
-                                               autocomplete="off" placeholder="Nom"></td>
+                                               autocomplete="off" placeholder="Prénom"></td>
                                     <td><input type="text" class="form-control" name="lastname" id="lastname"
-                                               autocomplete="off" placeholder="Prenom"></td>
+                                               autocomplete="off" placeholder="Nom"></td>
                                     <td><input type="text" class="form-control" name="email" id="email"
                                                autocomplete="off" placeholder="Email"></td>
                                     <td><input type="text" class="form-control" name="name_designation" id="name_designation"
-                                               autocomplete="off" placeholder="Designation">                                    </td>
+                                               autocomplete="off" placeholder="Désignation">                                    </td>
                                     <td><input type="text" class="form-control" name="name_type" id="name_type"
                                                autocomplete="off" placeholder="Type">                                    </td>
                                     <td><input type="text" class="form-control" name="n_kvps" id="n_kvps"
@@ -49,14 +49,14 @@
                                 </tr>
                                 <tr>
                                     <th scope="col">id</th>
-                                    <th scope="col">firstname</th>
-                                    <th scope="col">lastname</th>
+                                    <th scope="col">Prénom</th>
+                                    <th scope="col">Nom</th>
                                     <th scope="col">Email</th>
-                                    <th scope="col">Designation</th>
+                                    <th scope="col">Désignation</th>
                                     <th scope="col">Type</th>
                                     <th scope="col">N kvps</th>
-                                    <th scope="col">weight kg</th>
-                                    <th scope="col">Date de creation</th>
+                                    <th scope="col">kg</th>
+                                    <th scope="col">Date de création</th>
                                     <th scope="col">Action</th>
                                 </tr>
                                 </thead>
