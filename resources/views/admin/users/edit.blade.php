@@ -2,7 +2,7 @@
 
 @section('content')
     @include('admin.shared.header', [
-        'title' => __('Edit user :').' ' . $user->firstname .' '.$user->lastname,
+        'title' => __('Modifier l\'utilisateur :').' ' . $user->firstname .' '.$user->lastname,
         'description' => __(''),
         'class' => ''
     ])
@@ -13,7 +13,7 @@
                 <div class="card bg-secondary shadow">
                     <div class="card-header bg-white border-0">
                         <div class="row align-items-center">
-                            <h3 class="mb-0 pl-4">{{ __('Edit User') }}</h3>
+                            <h3 class="mb-0 pl-4">{{ __('Modifier l\'utilisateur') }}</h3>
                         </div>
                     </div>
                     <div class="card-body">

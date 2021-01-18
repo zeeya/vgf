@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Package_designation;
 use App\Models\Return_request;
+use App\Models\Return_type;
 use Illuminate\Http\Request;
 use DataTables;
 
@@ -31,6 +33,31 @@ class RequestController extends Controller
         } catch (ModelNotFoundException $e) {
             return 'notok';
         }
+    }
+
+    public function edit($id)
+    {
+        $return_request = Return_request::findOrFail($id);
+        $return_type = Return_type::select('name', 'id')->orderBy('name')->get();
+        $designation = Package_designation::select('name', 'id')->orderBy('name')->get();
+        return view('admin.return_request.edit')
+            ->with('return_types', $return_type)
+            ->with('designations', $designation)
+            ->with('return_request', $return_request);
+    }
+
+    public function update($id,Request $request)
+    {
+
+        $return_request = Return_request::findOrFail($id);
+        $return_request->return_type_id = $request->input('return_type_id');
+        $return_request->package_designation_id = $request->input('package_designation_id');
+        $return_request->weight_kg = $request->input('weight_kg');
+        $return_request->n_kvps = $request->input('n_kvps');
+
+        $return_request->update();
+        flash('La demande a été mise à jour avec succès!')->success();
+        return \Redirect::route('admin.edit.request', array($return_request->id));
     }
 
     public function fetch(Request $request)
@@ -82,6 +109,7 @@ class RequestController extends Controller
             })
             ->addColumn('action', function ($return_request) {
                 return '
+                 <a  href="' . route('admin.edit.request', ['id' => $return_request->id]) . '" class="edit btn btn-success btn-sm">Modifier</a> 
                         <a href="javascript:void(0)" onclick="deleteRequest(' . $return_request->id . ');" class="delete btn btn-danger btn-sm">Supprimer</a>
 				';
             })

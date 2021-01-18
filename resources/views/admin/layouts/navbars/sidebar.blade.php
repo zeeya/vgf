@@ -17,17 +17,17 @@
             </a>
             <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right">
                 <div class=" dropdown-header noti-title">
-                    <h6 class="text-overflow m-0">Welcome!</h6>
+                    <h6 class="text-overflow m-0">Bonjour !</h6>
                 </div>
                 <a href="{{ route('admin.edit.profile') }}" class="dropdown-item">
                     <i class="ni ni-single-02"></i>
-                    <span>My profile</span>
+                    <span>Mon profile</span>
                 </a>
                             <div class="dropdown-divider"></div>
                 <a href="{{ route('logout') }}" class="dropdown-item" onclick="event.preventDefault();
                 document.getElementById('logout-form').submit();">
                     <i class="ni ni-user-run"></i>
-                    <span>Logout</span>
+                    <span>Déconexion</span>
                 </a>
             </div>
         </li>
@@ -65,20 +65,20 @@
         <ul class="navbar-nav">
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('admin.home') }}">
-                    <i class="ni ni-tv-2 text-primary"></i> {{ __('Dashboard') }}
+                    <i class="ni ni-tv-2 text-primary"></i> {{ __('Tableau de bord') }}
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link active" href="#navbar-examples" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-examples">
-                    <i class="fab fa-laravel" style="color: #f4645f;"></i>
-                    <span class="nav-link-text" style="color: #f4645f;">{{ __('Laravel Examples') }}</span>
+                    <i class="fab " style="color: #f4645f;"></i>
+                    <span class="nav-link-text" style="color: #f4645f;">{{ __('Menu') }}</span>
                 </a>
 
                 <div class="collapse show" id="navbar-examples">
                     <ul class="nav nav-sm flex-column">
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('admin.list.users') }}">
-                                {{ __('User') }}
+                                {{ __('Utilisateur') }}
                             </a>
                         </li>
                         <li class="nav-item">

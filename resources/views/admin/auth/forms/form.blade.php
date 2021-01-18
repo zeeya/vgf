@@ -28,9 +28,9 @@
         <label class="form-control-label" for="input-lastname">{{ __('Prenom') }}</label>
         <input type="text" name="lastname" id="input-lastname" class="form-control form-control-alternative{{ $errors->has('lastname') ? ' is-invalid' : '' }}" placeholder="{{ __('Prenom') }}" value="{{ old('lastname',  isset($user) ?$user->lastname :'') }}" required autofocus>
 
-        @if ($errors->has('name'))
+        @if ($errors->has('lastname'))
             <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $errors->first('name') }}</strong>
+                                            <strong>{{ $errors->first('lastname') }}</strong>
                                         </span>
         @endif
     </div>

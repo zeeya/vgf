@@ -123,9 +123,7 @@ class Return_requestController extends Controller
                     ';
                 })
                 ->addColumn('action', function ($return_request) {
-                    return '
-                            <a href="{{ route('editReturn_request', [$return_request->compteur]) }}"  class="edit btn btn-danger btn-sm">Supprimer</a>
-                    ';
+            
                 })
                 ->rawColumns(['action' ])
                 ->setRowId(function($return_request) {

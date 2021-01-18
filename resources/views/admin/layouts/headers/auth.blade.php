@@ -20,18 +20,18 @@
                 </a>
                 <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right">
                     <div class=" dropdown-header noti-title">
-                        <h6 class="text-overflow m-0">Welcome!</h6>
+                        <h6 class="text-overflow m-0">Bonjour!</h6>
                     </div>
                     <a href="{{ route('admin.edit.profile') }}" class="dropdown-item">
                         <i class="ni ni-single-02"></i>
-                        <span>My profile</span>
+                        <span>Mon profile</span>
                     </a>
 
                     <div class="dropdown-divider"></div>
                     <a href="{{ route('admin.logout') }}" class="dropdown-item" onclick="event.preventDefault();
                 document.getElementById('logout-form').submit();">
                         <i class="ni ni-user-run"></i>
-                        <span>Logout</span>
+                        <span>Déconnexion</span>
                     </a>
                 </div>
             </li>

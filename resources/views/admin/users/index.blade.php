@@ -14,10 +14,10 @@
                         <div class="card-header border-0">
                             <div class="row align-items-center">
                                 <div class="col-8">
-                                    <h3 class="mb-0">Users</h3>
+                                    <h3 class="mb-0">Liste des utilisateurs</h3>
                                 </div>
                                 <div class="col-4 text-right">
-                                    <a href="{{ route('admin.create.user') }}" class="btn btn-sm btn-primary">Add user</a>
+                                    <a href="{{ route('admin.create.user') }}" class="btn btn-sm btn-primary">Ajouter un utilisateur</a>
                                 </div>
                             </div>
                         </div>
@@ -30,16 +30,16 @@
                                 <thead class="thead-light">
                                 <tr role="row" class="filter">
                                     <td><input type="text" class="form-control" name="firstname" id="firstname"
-                                               autocomplete="off" placeholder="Nom"></td>
-                                    <td><input type="text" class="form-control" name="lastname" id="lastname"
                                                autocomplete="off" placeholder="Prenom"></td>
+                                    <td><input type="text" class="form-control" name="lastname" id="lastname"
+                                               autocomplete="off" placeholder="Nom"></td>
                                     <td><input type="text" class="form-control" name="email" id="email"
                                                autocomplete="off" placeholder="Email">                                    </td>
                                     <td>   </td>
                                 </tr>
                                 <tr>
-                                    <th scope="col">firstname</th>
-                                    <th scope="col">lastname</th>
+                                    <th scope="col">Prénom</th>
+                                    <th scope="col">Nom</th>
                                     <th scope="col">Email</th>
                                     <th scope="col">Action</th>
                                 </tr>
@@ -109,8 +109,8 @@
 
         });
 
-        function deleteUser(id) {
-            var msg = 'Are you sure?';
+        function deleteUser(id,row) {
+            var msg = 'Etes-vous sûr que vous voulez supprimer?';
             if (confirm(msg)) {
                 $.post("{{ route('admin.delete.user') }}", {id: id, _method: 'DELETE', _token: '{{ csrf_token() }}'})
                     .done(function (response) {
