@@ -179,7 +179,7 @@ return [
 
         // datatable
         Yajra\DataTables\DataTablesServiceProvider::class,
-
+        Milon\Barcode\BarcodeServiceProvider::class,	
     ],
 
     /*
@@ -194,7 +194,6 @@ return [
     */
 
     'aliases' => [
-
         'App' => Illuminate\Support\Facades\App::class,
         'Arr' => Illuminate\Support\Arr::class,
         'Artisan' => Illuminate\Support\Facades\Artisan::class,
@@ -234,6 +233,8 @@ return [
         // pdf
         'PDF' => Barryvdh\DomPDF\Facade::class,
         'DataTables' => Yajra\DataTables\Facades\DataTables::class,
+        'DNS1D' => Milon\Barcode\Facades\DNS1DFacade::class,
+        'DNS2D' => Milon\Barcode\Facades\DNS2DFacade::class,
     ],
 
 ];

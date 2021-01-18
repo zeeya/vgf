@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'default' => env('MAIL_MAILER', 'smtp'),
+    'default' => env('MAIL_MAILER', 'sendmail'),
 
     /*
     |--------------------------------------------------------------------------
@@ -83,10 +83,8 @@ return [
     |
     */
 
-    'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),
-        'name' => env('MAIL_FROM_NAME', 'Example'),
-    ],
+    'from' => [ 'address' => env('MAIL_FROM_ADDRESS', 'vgf@mail.com'), 'name' => env('MAIL_FROM_NAME', 'VGF'), ],	 
+    'reply_to' => ['address' => 'auadmohammad@gmail.com', 'name' => 'Mohammad auad'],
 
     /*
     |--------------------------------------------------------------------------
