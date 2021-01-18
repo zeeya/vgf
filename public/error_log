@@ -1,0 +1,1 @@
+[15-Jan-2021 16:03:06 UTC] PHP Fatal error:  Cannot use Illuminate\Support\Facades\Mail as Mail because the name is already in use in /home/vgfmonpreprod/site/app/Http/Controllers/Return_requestController.php on line 15

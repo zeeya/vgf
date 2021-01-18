@@ -1,0 +1,10 @@
+.downolad-pdf {
+    width: 60%;
+    margin-top: 40px !important;
+    margin: auto;
+    text-align: center;
+    display: block;
+    padding: 10px 0;
+    text-transform: uppercase;
+    font-size: 1.5em;
+}
