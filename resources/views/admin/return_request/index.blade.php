@@ -28,6 +28,8 @@
                             <table class="table align-items-center table-flush"  id="retunRequestDatatableAjax">
                                 <thead class="thead-light">
                                 <tr role="row" class="filter">
+                                    <td><input type="text" class="form-control" name="id" id="id"
+                                               autocomplete="off" placeholder="Id"></td>
                                     <td><input type="text" class="form-control" name="firstname" id="firstname"
                                                autocomplete="off" placeholder="Nom"></td>
                                     <td><input type="text" class="form-control" name="lastname" id="lastname"
@@ -46,6 +48,7 @@
                                     <td>   </td>
                                 </tr>
                                 <tr>
+                                    <th scope="col">id</th>
                                     <th scope="col">firstname</th>
                                     <th scope="col">lastname</th>
                                     <th scope="col">Email</th>
@@ -90,6 +93,7 @@
                 ajax: {
                     url: '{!! route('admin.fetch.data.requests') !!}',
                     data: function (d) {
+                        d.id = $('#id').val();
                         d.name_designation = $('#name_designation').val();
                         d.n_kvps = $('#n_kvps').val();
                         d.weight_kg = $('#weight_kg').val();
@@ -98,6 +102,7 @@
                         d.lastname = $('#lastname').val();
                     }
                 }, columns: [
+                    {data: 'id', name: 'id'},
                     {data: 'firstname', name: 'firstname'},
                     {data: 'lastname', name: 'lastname'},
                     {data: 'email', name: 'email'},
@@ -122,6 +127,10 @@
                 e.preventDefault();
             });
             $('#n_kvps').on('keyup', function (e) {
+                oTable.draw();
+                e.preventDefault();
+            });
+            $('#id').on('keyup', function (e) {
                 oTable.draw();
                 e.preventDefault();
             });

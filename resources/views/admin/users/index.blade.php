@@ -109,7 +109,7 @@
 
         });
 
-        function deleteUser(id) {
+        function deleteUser(id,row) {
             var msg = 'Are you sure?';
             if (confirm(msg)) {
                 $.post("{{ route('admin.delete.user') }}", {id: id, _method: 'DELETE', _token: '{{ csrf_token() }}'})
