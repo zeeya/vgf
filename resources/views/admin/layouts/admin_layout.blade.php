@@ -19,7 +19,7 @@
     <link type="text/css" href="{{ asset('admin') }}/css/argon.css?v=1.0.0" rel="stylesheet">
     <!-- Extra details for Live View on GitHub Pages -->
     @stack('css')
-    <!-- End Google Tag Manager -->
+
 </head>
 <body class="">
 
@@ -47,6 +47,5 @@
 <!-- Argon JS -->
 <script src="{{ asset('admin') }}/js/argon.js?v=1.0.0"></script>
 
-@stack('scripts')
 </body>
 </html>
