@@ -63,9 +63,19 @@ class LoginController extends Controller
 
         $request->session()->invalidate();
 
-        return redirect('/admin/login');
+        return redirect($this->redirectTo);
     }
-
+    /**
+     * The user has been authenticated.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  mixed  $user
+     * @return mixed
+     */
+    protected function authenticated(Request $request, $user)
+    {
+        return redirect($this->redirectTo);
+    }
 
     /**
      * Show the application's login form.
